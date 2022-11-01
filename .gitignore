@@ -1,0 +1,86 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+/.vs/Ofertowniki/config/applicationhost.config
+/.vs/Ofertowniki/v16/.suo
+/Ofertowniki/appsettings.json
+/Ofertowniki/bin/Debug/netcoreapp3.1/appsettings.json
+/OfertownikiSPA/node_modules/
+/Ofertowniki/bin/Debug/
+/.vs
+/node_modules
+/package-lock.json
+/Ofertowniki/appsettings.json
+/Ofertowniki/obj/Debug/netcoreapp3.1/Ofertowniki.csproj.AssemblyReference.cache
+/Ofertowniki/bin/Debug/netcoreapp3.1/appsettings.json
+/Ofertowniki/appsettings.json
+/.vs/Ofertowniki/v16/.suo
+/Ofertowniki/obj/Debug/*
+/Ofertowniki/bin/Debug/*
+/Ofertowniki/appsettings.json
+/Ofertowniki/appsettings.Development.json
+/.vs/Ofertowniki/v16/.suo
+/OfertownikiSPA/.angular/cache/angular-webpack/345d300d7901200694ae5b4e210a909fe66395b1/0.pack
+/OfertownikiSPA/.angular/cache/angular-webpack/
+/OfertownikiSPA/.angular/cache/babel-webpack/
+/OfertownikiSPA/.angular/cache/13.1.3/
+/.vs/Ofertowniki/v16/.suo
+/Ofertowniki/bin/Debug/netcoreapp3.1/Ofertowniki.deps.json
+/.vs/Ofertowniki/DesignTimeBuild/.dtbcache.v2
+/.vs/Ofertowniki/v16/.suo
+/Ofertowniki/Properties/PublishProfiles/Ofertownikiapi.berg-dev.eu - Web Deploy.pubxml
+/.vs/Ofertowniki/v16/.suo
+/Ofertowniki/bin/Debug/netcoreapp3.1/Ofertowniki.deps.json
+/Ofertowniki/bin/Debug/netcoreapp3.1/Ofertowniki.deps.json
+/Ofertowniki/obj/Ofertowniki.csproj.nuget.dgspec.json
+/Ofertowniki/obj/Ofertowniki.csproj.nuget.g.props
+/Ofertowniki/obj/project.assets.json
+/Ofertowniki/obj/project.nuget.cache
+.vs/Ofertowniki/v16/.suo
+/Ofertowniki/bin/Debug/netcoreapp3.1/
+/.vs/Ofertowniki/v16/
+/Ofertowniki/bin/
+/Ofertowniki/obj/
