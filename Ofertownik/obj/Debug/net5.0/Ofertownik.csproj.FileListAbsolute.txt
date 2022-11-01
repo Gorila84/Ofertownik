@@ -66,3 +66,5 @@ C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Swashbuckle.A
 C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\obj\Debug\net5.0\Ofertownik.MvcApplicationPartsAssemblyInfo.cs
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\log4net.config
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\log4net.dll

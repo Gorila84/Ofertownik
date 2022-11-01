@@ -11,6 +11,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Ofertownik.Data;
 using Ofertownik.Data.Model;
+using Ofertownik.Helpers;
+using Ofertownik.Repositories;
+using Ofertownik.Repositories.IRpositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +39,8 @@ namespace Ofertownik
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.Configure<ApplicationSettings>(Configuration.GetSection("ApplicationSettings"));
-
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddIdentity<User, IdentityRole>(options =>
                                                     {
                                                         options.SignIn.RequireConfirmedAccount = true;
