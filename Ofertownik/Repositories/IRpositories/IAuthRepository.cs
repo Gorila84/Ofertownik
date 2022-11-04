@@ -7,7 +7,7 @@ namespace Ofertownik.Repositories.IRpositories
 {
     public interface IAuthRepository
     {
-        Task<User> Login(LoginDTO userDTO);
+        Task<User> Login(string userName, string password);
         Task<User> Register(RegisterDTO registerDTO);
         Task<Tuple<bool, string>> UserValidation(string userName, string nip, string municipalitie);
         string ResetPassword(string userName);

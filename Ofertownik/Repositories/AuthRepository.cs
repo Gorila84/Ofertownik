@@ -5,6 +5,7 @@ using Ofertownik.Data.Model;
 using Ofertownik.Helpers;
 using Ofertownik.Repositories.IRpositories;
 using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
 
 namespace Ofertownik.Repositories
@@ -29,15 +30,29 @@ namespace Ofertownik.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<User> Login(LoginDTO userDTO)
+        public async Task<User> Login(string userName, string password)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByNameAsync(userName);
+            if(user == null)
+            {
+                return null;
+            }
+
+            var passwordValid = await _userManager.CheckPasswordAsync(user, password);
+            if(passwordValid == false)
+            {
+                return null;
+            }
+
+            return user;
+           
         }
 
         public async Task<User> Register(RegisterDTO registerDTO)
         {
             try
             {
+                registerDTO.UserName = registerDTO.UserName.ToLower();
                 var user = new User
                 {
                     UserName = registerDTO.UserName
