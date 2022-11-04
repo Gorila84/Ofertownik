@@ -10,5 +10,7 @@ namespace Ofertownik.Data
             : base(options)
         {
         }
+
+        public DbSet<Material> Materials { get; set; }
     }
 }

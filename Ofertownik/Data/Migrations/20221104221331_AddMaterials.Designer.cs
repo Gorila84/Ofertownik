@@ -10,8 +10,8 @@ using Ofertownik.Data;
 namespace Ofertownik.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221104214907_Material")]
-    partial class Material
+    [Migration("20221104221331_AddMaterials")]
+    partial class AddMaterials
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -150,6 +150,42 @@ namespace Ofertownik.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Ofertownik.Data.Model.Material", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Height")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MaterialName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("PurchasePrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("SupplierName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpadateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Width")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Materials");
                 });
 
             modelBuilder.Entity("Ofertownik.Data.Model.User", b =>
