@@ -40,9 +40,10 @@ namespace Ofertownik
                 options.UseSqlServer(
                     _configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-
+            services.AddAutoMapper(typeof(Startup));
             services.Configure<ApplicationSettings>(_configuration.GetSection("ApplicationSettings"));
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IMaterialRepository, MaterialRepository>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddIdentity<User, IdentityRole>(options =>
                                                     {

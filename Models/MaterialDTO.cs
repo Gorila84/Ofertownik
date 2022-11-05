@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 namespace Models
 {
     public class MaterialDTO
+
     {
+        public string userId { get; set; }
         [Required(ErrorMessage ="Nazwa materiału jest wymagana")]
         public string MaterialName { get; set; }
         [Required(ErrorMessage = "Wysokość materiału jest wymagana")]

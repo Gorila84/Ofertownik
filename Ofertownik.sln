@@ -7,7 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofertownik", "Ofertownik\Of
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{7ACF1827-84AE-4FD6-B097-624CE473B54A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{1527065B-0EE3-4E24-B467-13C402A34DC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{1527065B-0EE3-4E24-B467-13C402A34DC4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7ACF1827-84AE-4FD6-B097-624CE473B54A} = {7ACF1827-84AE-4FD6-B097-624CE473B54A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
