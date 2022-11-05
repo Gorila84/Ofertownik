@@ -10,6 +10,7 @@ namespace Models
     public class MaterialDTO
 
     {
+        public int Id { get; set; }
         public string userId { get; set; }
         [Required(ErrorMessage ="Nazwa materiału jest wymagana")]
         public string MaterialName { get; set; }

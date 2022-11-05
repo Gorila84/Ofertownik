@@ -18,7 +18,7 @@ namespace Ofertownik.Controllers
         [HttpPost("addMaterial")]
         public async Task<IActionResult> AddMaterial([FromBody] MaterialDTO materialDTO)
         {
-            if( await _materialRepository.ValidateMaterial(materialDTO.MaterialName, materialDTO.PurchasePrice))
+            if( await _materialRepository.ValidateMaterial(materialDTO.MaterialName, materialDTO.PurchasePrice, materialDTO.userId))
             {
                 BadRequest("Materiał o podanej nazwie i cenie już istnieje.");
             }
@@ -30,30 +30,30 @@ namespace Ofertownik.Controllers
         }
 
         [HttpGet("getMaterial/{id}")]
-        public async Task<IActionResult> GetMaterialById(int id)
+        public async Task<IActionResult> GetMaterialById(int id, string userId)
         {
-            var material = await _materialRepository.GetMaterial(id);
+            var material = await _materialRepository.GetMaterial(id, userId);
             return Ok(material);
         }
 
         [HttpGet("getMaterials")]
-        public async Task<IActionResult> GetMaterials()
+        public async Task<IActionResult> GetMaterials(string userId)
         {
-            var material = await _materialRepository.GetAllMaterials();
+            var material = await _materialRepository.GetAllMaterials(userId);
             return Ok(material);
         }
 
         [HttpPut("editMaterial/{id}")]
-        public async Task<IActionResult> EditMaterial(int id, MaterialDTO materialDTO)
+        public async Task<IActionResult> EditMaterial(string userId, int id, MaterialDTO materialDTO)
         {
-            var materialForUpdate = await _materialRepository.UpdateMaterial(id, materialDTO);
+            var materialForUpdate = await _materialRepository.UpdateMaterial(userId, id, materialDTO);
             return Ok(materialForUpdate);
         }
 
         [HttpDelete("deleteMaterial/{id}")]
-        public async Task<IActionResult> DeleteMaterial( int id)
+        public async Task<IActionResult> DeleteMaterial( int id, string userId)
         {
-            var materialForRemove = await _materialRepository.DeleteMaterial(id);
+            var materialForRemove = await _materialRepository.DeleteMaterial(id, userId);
             return Ok(materialForRemove);
         }
     }

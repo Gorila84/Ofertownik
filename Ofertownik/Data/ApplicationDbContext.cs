@@ -12,5 +12,8 @@ namespace Ofertownik.Data
         }
 
         public DbSet<Material> Materials { get; set; }
+        public DbSet<Machine> Machines { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<CalcullationSetting> CalcullationSettings { get; set; }
     }
 }
