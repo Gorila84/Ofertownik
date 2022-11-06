@@ -26,9 +26,9 @@ namespace Ofertownik.Controllers
         }
 
         [HttpGet("getCalcullationSetting/{id}")]
-        public async Task<IActionResult> GetCalcullationSettingById(int id, string userId)
+        public async Task<IActionResult> GetCalcullationSettingById( string userId)
         {
-            var calcullationSetting = await _calcullationSettingRepository.GetCalcullationSettings(id, userId);
+            var calcullationSetting = await _calcullationSettingRepository.GetCalcullationSettings( userId);
             return Ok(calcullationSetting);
         }
 

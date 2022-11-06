@@ -9,6 +9,9 @@ namespace Ofertownik.Helpers
         public MapperProfile()
         {
             CreateMap<MaterialDTO, Material>().ReverseMap();
+            CreateMap<MachineDTO, Machine>().ReverseMap();
+            CreateMap<ProductDTO, Product>().ReverseMap();
+            CreateMap<CalcullationSettingDTO, CalcullationSetting>().ReverseMap(); 
         }
     }
 }

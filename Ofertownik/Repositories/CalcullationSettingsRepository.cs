@@ -56,11 +56,10 @@ namespace Ofertownik.Repositories
             return calcullationSettings;
         }
 
-        public async Task<CalcullationSettingDTO> GetCalcullationSettings(int calcullationSettingsId, string userId)
+        public async Task<CalcullationSettingDTO> GetCalcullationSettings( string userId)
         {
             CalcullationSettingDTO calcullationSettings = _mapper.Map<CalcullationSetting, CalcullationSettingDTO>(
-                                                       await _db.CalcullationSettings.FirstOrDefaultAsync(x => x.Id == calcullationSettingsId
-                                                                                                    && x.UserId == userId));
+                                                       await _db.CalcullationSettings.FirstOrDefaultAsync(x => x.UserId == userId));
             return calcullationSettings;
         }
 

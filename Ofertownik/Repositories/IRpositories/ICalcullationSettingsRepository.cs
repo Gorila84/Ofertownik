@@ -9,7 +9,7 @@ namespace Ofertownik.Repositories.IRpositories
         Task<CalcullationSettingDTO> AddCalcullationSettings(CalcullationSettingDTO calcullationSettingsDTO);
         Task<CalcullationSettingDTO> UpdateCalcullationSettings(string userId, int calcullationSettingsId, CalcullationSettingDTO calcullationSettingsDTO);
         Task<IEnumerable<CalcullationSettingDTO>> GetAllCalcullationSettings(string userId);
-        Task<CalcullationSettingDTO> GetCalcullationSettings(int calcullationSettingsId, string userId);
+        Task<CalcullationSettingDTO> GetCalcullationSettings(string userId);
 
         Task<bool> DeleteCalcullationSettings(int calcullationSettingsId, string userId);
 

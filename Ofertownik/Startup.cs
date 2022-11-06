@@ -44,6 +44,9 @@ namespace Ofertownik
             services.Configure<ApplicationSettings>(_configuration.GetSection("ApplicationSettings"));
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IMaterialRepository, MaterialRepository>();
+            services.AddScoped<ICalcullationSettingsRepository, CalcullationSettingsRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IMachineRepository, MachineRepository>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddIdentity<User, IdentityRole>(options =>
                                                     {
