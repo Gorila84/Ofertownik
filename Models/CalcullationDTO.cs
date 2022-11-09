@@ -10,8 +10,10 @@ namespace Models
     {
         public string UserId { get; set; }
         public int ProductId { get; set; }
+        public int MaterialId { get; set; }
         public int MachineId { get; set; }
-        public int Minutes { get; set; }
+        public int WorkerTimeInMinutes { get; set; }
+        public int MachineWorkingTimeInMinutes { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
      

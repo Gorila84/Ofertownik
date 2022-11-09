@@ -15,6 +15,8 @@ using Ofertownik.Data.Model;
 using Ofertownik.Helpers;
 using Ofertownik.Repositories;
 using Ofertownik.Repositories.IRpositories;
+using Ofertownik.Services;
+using Ofertownik.Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +49,7 @@ namespace Ofertownik
             services.AddScoped<ICalcullationSettingsRepository, CalcullationSettingsRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IMachineRepository, MachineRepository>();
+            services.AddScoped<ICalcullationService, CalcullationService>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddIdentity<User, IdentityRole>(options =>
                                                     {

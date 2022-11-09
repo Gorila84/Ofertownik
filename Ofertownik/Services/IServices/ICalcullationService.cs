@@ -13,7 +13,8 @@ namespace Ofertownik.Services.IServices
                                                        int productId,
                                                        int materialId,
                                                        int machineId,
-                                                       int minutes,
+                                                       int workerTimeInminutes,
+                                                       int machineWorkingTimeInMinute,
                                                        int height,
                                                        int width);
 
