@@ -15,7 +15,7 @@ namespace Ofertownik.Controllers
         }
 
         [HttpPost("calculate")]
-        public async Task<double> CalculatePrice (CalcullationDTO calcullationDTO)
+        public async Task<IActionResult> CalculatePrice (CalcullationDTO calcullationDTO)
         {
             var result = await _calcullationService.CallculateMarkingPrice(calcullationDTO.UserId,
                                                         calcullationDTO.ProductId,
@@ -26,7 +26,28 @@ namespace Ofertownik.Controllers
                                                         calcullationDTO.Height,
                                                         calcullationDTO.Width
                                                         );
-            return result;
+            return Ok(result);
         }
+
+        [HttpPost("calculateMaterialPrice")]
+        public async Task<IActionResult> CalculateMaterialPrice(CalcullationDTO calcullationDTO)
+        {
+            var calculateMaterialPrice = await _calcullationService.CalculateMaterialPrice(calcullationDTO.MaterialId,
+                                                                                     calcullationDTO.UserId,
+                                                                                     calcullationDTO.Height,
+                                                                                     calcullationDTO.Width);
+            return Ok(calculateMaterialPrice);
+
+        }
+
+        [HttpPost("userprice")]
+        public async Task<IActionResult> CalculateWorkerPrice(CalcullationDTO calcullationDTO)
+        {
+            var workerPrice = await _calcullationService.CalcullateWorkerWorkPerMinutePrice(calcullationDTO.UserId, 
+                                                                                             calcullationDTO.WorkerTimeInMinutes);
+            return Ok(workerPrice);
+        }
+
+       
     }
 }
