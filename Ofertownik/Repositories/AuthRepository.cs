@@ -55,7 +55,13 @@ namespace Ofertownik.Repositories
                 registerDTO.UserName = registerDTO.UserName.ToLower();
                 var user = new User
                 {
-                    UserName = registerDTO.UserName
+                    UserName = registerDTO.UserName,
+                    CompanyName = registerDTO.CompanyName,
+                    CompanyAddress = registerDTO.CompanyAddress,
+                    NIP = registerDTO.NIP,
+                    City = registerDTO.City,
+                    PostalCode = registerDTO.PostalCode
+                    
                 };
                 var result = await _userManager.CreateAsync(user, registerDTO.Password);
               
