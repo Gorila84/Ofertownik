@@ -11,6 +11,7 @@ namespace Ofertownik.Data.Model
         public int Width { get; set; }
         public double PurchasePrice { get; set; }
         public string SupplierName { get; set; }
+        public User User { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpadateDate { get; set; }
         public string UpdateBy { get; set; }

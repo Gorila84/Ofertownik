@@ -32,10 +32,10 @@ namespace Ofertownik.Controllers
             return Ok(Machine);
         }
 
-        [HttpGet("getMachines")]
-        public async Task<IActionResult> GetMachines(string userId)
+        [HttpGet("getMachines/{id}")]
+        public async Task<IActionResult> GetMachines(string id)
         {
-            var Machine = await _machineRepository.GetAllMachines(userId);
+            var Machine = await _machineRepository.GetAllMachines(id);
             return Ok(Machine);
         }
 
