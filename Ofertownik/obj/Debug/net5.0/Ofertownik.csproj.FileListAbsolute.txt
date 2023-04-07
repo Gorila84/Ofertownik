@@ -76,3 +76,10 @@ C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Microsoft.Ext
 C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Business.dll
 C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Business.pdb
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\obj\Debug\net5.0\staticwebassets\Ofertownik.StaticWebAssets.Pack.cache
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\obj\Debug\net5.0\staticwebassets\msbuild.Ofertownik.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\obj\Debug\net5.0\staticwebassets\msbuild.build.Ofertownik.props
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Ofertownik.props
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Ofertownik.props
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\MySqlConnector.dll
+C:\Projekty\.Net\Ofertownik\Ofertownik\Ofertownik\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll

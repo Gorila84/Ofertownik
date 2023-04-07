@@ -38,9 +38,10 @@ namespace Ofertownik
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var serverVersion = new MySqlServerVersion(new Version(5, 5, 51));
+            var connectionString = _configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    _configuration.GetConnectionString("DefaultConnection")));
+                options.UseMySql( connectionString, serverVersion));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddAutoMapper(typeof(Startup));
             services.Configure<ApplicationSettings>(_configuration.GetSection("ApplicationSettings"));
